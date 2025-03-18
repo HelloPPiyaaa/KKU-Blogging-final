@@ -1,0 +1,50 @@
+.liked {
+  color: red !important;
+}
+
+.not-liked {
+  color: black !important;
+}
+
+.Searchpage {
+  display: grid;
+  width: 96%;
+  margin: 6rem auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto;
+}
+
+.Searchpage .aside-search .sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 81vh;
+  top: 6rem;
+  position: fixed;
+  width: 15%;
+}
+
+.aside-search > .sidebar > a {
+  display: flex;
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  height: 3.7rem;
+  transition: all 300ms ease;
+}
+
+.aside-search .sidebar a.active {
+  background-color: #f1dff5;
+  margin-left: 0;
+}
+
+.aside-search .sidebar a.active::before {
+  content: '';
+  width: 6px;
+  height: 100%;
+  background: #cb6ce6;
+}
+.aside-search .sidebar a svg {
+  font-size: 1.6rem;
+  transition: all 300ms ease;
+}

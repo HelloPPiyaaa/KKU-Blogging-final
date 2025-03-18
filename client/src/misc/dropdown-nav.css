@@ -1,0 +1,51 @@
+.animationwrap {
+  position: absolute;
+  right: 0;
+  transform: translateY(10px);
+  z-index: 50;
+}
+.list-dropdown {
+  background-color: white;
+  position: absolute;
+  right: 0;
+  border: 1px solid #e3e3e3;
+  width: 15rem;
+  height: auto;
+  overflow: hidden;
+  transition-duration: 200ms;
+}
+.link-list {
+  display: flex;
+  gap: 0.5rem;
+  padding-left: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  align-items: center;
+}
+.link-list a {
+  text-decoration: none;
+}
+
+.button-signout {
+  text-align: left;
+  padding: 1rem;
+  width: 100%;
+  padding-left: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.button-signout:hover {
+  background-color: #f0f0f0;
+}
+.button-signout > h1 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .link-list {
+    display: none;
+  }
+}

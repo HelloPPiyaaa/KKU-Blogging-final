@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.help-centre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  min-height: 100vh;
+  color: black;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 20px;
+}
+
+.header input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+.faq {
+  background-color: white;
+  color: #333;
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.faq-question {
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  color: #555;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.footer {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1;
+}
+
+/* searchbar */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 50px;
+  padding: 5.5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Fixed max-width for responsiveness */
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 2px 2px;
+  margin: 7px;
+  border-radius: 50px 0 0 50px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.search-bar button {
+  background-color: #4b4b4b;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.search-bar button:hover {
+  background-color: #5c5c5c;
+}
+/* 📌 ฟอนต์สำหรับ FAQ Section */
+.faq {
+  font-family: "Kanit", sans-serif; /* ใช้ฟอนต์ Kanit */
+  margin-top: 2rem;
+  text-align: left;
+}
+
+/* 📌 กล่องของแต่ละคำถาม */
+.faq-item {
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 15px;
+  transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+  background: #f1f1f1;
+}
+
+/* 📌 คำถาม (summary) */
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Kanit", sans-serif;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #a078d4;
+}
+
+/* 📌 คำตอบ */
+.faq-answer {
+  font-size: 1rem;
+  font-family: "Kanit", sans-serif;
+  padding: 10px 0;
+  color: #333;
+} /* 📌 จัดให้ปุ่มย้อนกลับชิดซ้าย */
+.backbtn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* จัดให้ชิดซ้าย */
+  position: fixed;
+  top: 15px; /* ระยะห่างจากขอบบน */
+  left: 10px; /* ชิดซ้ายสุด */
+  z-index: 1000; /* ให้ปุ่มอยู่ด้านบน */
+}
+
+/* 📌 ปรับขนาดปุ่ม */
+.back-button {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #a078d4;
+}
+
+/* 📌 Responsive: ปรับขนาดตัวอักษรในหน้าจอเล็ก */
+@media screen and (max-width: 768px) {
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+  .back-button {
+    margin-left: -200px;
+  }
+  .header h1 {
+    font-size: 20px;
+  }
+  .header h2 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .faq-question {
+    font-size: 0.95rem;
+  }
+
+  .faq-answer {
+    font-size: 0.85rem;
+  }
+  .back-button {
+    margin-left: -200px;
+  }
+  .header h1 {
+    font-size: 20px;
+  }
+  .header h2 {
+    font-size: 14px;
+  }
+}

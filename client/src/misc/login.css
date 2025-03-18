@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.login-container,
+input {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, aliceblue, #f9f0ff);
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 550px; /* Adjusted width for better centering */
+  height: auto; /* Set to auto to allow content to dictate height */
+  background-color: #fff;
+  border-radius: 3.3rem;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.27);
+  padding: 3rem; /* Adjusted padding for inner spacing */
+}
+
+.inner-box {
+  width: 100%;
+  height: 100%;
+}
+
+.forms-wrap {
+  display: flex; /* Changed to flex for simple centering */
+  flex-direction: column; /* Ensure elements stack vertically */
+  justify-content: center; /* Center contents vertically */
+  height: 100%; /* Full height for centering */
+}
+
+.sign-in-form {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.logo {
+  display: flex;
+  justify-content: center; /* Center the contents horizontally */
+  align-items: center; /* Center the contents vertically */
+  margin: 30px 0; /* Optional: Adjust margin for spacing */
+}
+
+.logo img {
+  width: 200px; /* Keep the width of the image */
+}
+
+.heading h4 {
+  font-weight: 600;
+  color: #151111;
+  text-align: center;
+  margin: 20px; /* Reduce margin for smaller screens */
+}
+
+.input-wrap {
+  position: relative;
+  height: 37px;
+  margin-bottom: 2rem;
+}
+
+.input-field {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #bbb;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #151111;
+  transition: 0.4s;
+}
+
+.label-login {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #bbb;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.input-field.active {
+  border-bottom-color: #151111;
+}
+
+.input-field.active + .label-login {
+  font-size: 0.75rem;
+  top: -2px;
+}
+
+.sign-btn {
+  display: inline-block;
+  width: 100%;
+  height: 43px;
+  background-color: #151111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  transition: 0.3s;
+}
+
+.sign-btn:hover {
+  background-color: #151111;
+}
+
+.text {
+  color: #bbb;
+  font-size: 0.7rem;
+  text-align: center; /* Center the text in the container */
+  margin-top: 1rem; /* เพิ่มระยะห่างด้านบน */
+}
+
+.text-r {
+  text-align: right !important;
+}
+
+.text-r a:hover{
+  color: #222 !important;
+}
+
+.text a {
+  color: #bbb;
+  transition: 0.3s;
+}
+
+.text a:hover {
+  color: white;
+}
+
+@media (max-width: 850px) {
+  .box {
+    max-width: 90%; /* Allow the box to use more width on small screens */
+    border-radius: 2rem; /* Slightly reduce border-radius on smaller screens */
+    padding: 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .heading h4 {
+    font-size: 1.5rem; /* Adjust font size for heading */
+  }
+
+  .sign-in-form {
+    padding: 1.5rem; /* Add padding for small screens */
+  }
+}
+
+@media (max-width: 530px) {
+  main {
+    padding: 1rem;
+  }
+
+  .box {
+    border-radius: 1.5rem; /* Slightly reduce border-radius */
+  }
+
+  .inner-box {
+    padding: 1rem;
+  }
+
+  .heading h4 {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .text {
+    font-size: 0.8rem; /* Adjust font size for text */
+  }
+
+  .sign-btn {
+    font-size: 0.75rem; /* Adjust font size for button */
+  }
+}

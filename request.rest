@@ -1,0 +1,28 @@
+# POST https://kku-for-deploy.onrender.com/create-blog/get-blog
+# Content-Type: application/json
+
+# {
+#     "blog_id": "Blog-ggtFn9aArjdb9drM3hJJJ2g"
+# }
+
+# POST https://kku-for-deploy.onrender.com/users/get-profile
+# Content-Type: application/json
+
+# {
+#     "username": "piyarat4543"
+# }
+
+POST https://kku-for-deploy.onrender.com/create-blog
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDdiODVmMTE0NGI5NDlkNmFmNjg3NyIsImlhdCI6MTcyODYzNjYxOX0.LsdkFU7XqMrcNMR1xk-LjWWKRXOUuhGIsdKjsbKxfE8
+Content-Type: application/json
+
+{
+    "topic": "kdvdbdk",
+    "banner": "https://kku-for-deploy.onrender.com/uploads/file-1728661793587-905069819.jpg",
+    "des": "kk",
+    "content": {
+        "blocks": [1,2]
+    },
+    "tags": ["tag1","tag2"]
+
+}

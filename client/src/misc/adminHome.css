@@ -1,0 +1,870 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.adminHome .contain {
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+}
+
+.adminHome {
+  font-size: 0.88rem;
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  font-size: 0.88rem;
+  background: var(--color-background);
+  user-select: none;
+  overflow-x: hidden;
+  color: var(--color-dark);
+}
+
+.adminHome .sidebar>a {
+  color: var(--color-dark);
+  text-decoration: none;
+  font-size: 14px auto 23rem;
+}
+
+.adminHome .top>.logo>img {
+  display: block;
+  width: 100%;
+  margin-top: -40px; /* ปรับค่านี้ตามต้องการ */
+}
+
+.adminHome .sidebar>a>h3 {
+  font-size: 0.87rem;
+  font-weight: bold;
+}
+
+.adminHome .profile-photo img {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.adminHome .profile-photo div svg {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.adminHome .text-muted1 {
+  color: var(--color-dark);
+}
+
+.adminHome .primary {
+  color: var(--color-primary);
+}
+
+.adminHome .danger {
+  color: var(--color-danger);
+}
+
+.adminHome .success {
+  color: var(--color-success);
+}
+
+.adminHome .warning {
+  color: var(--color-warning);
+}
+
+.adminHome small {
+  font-size: 0.75rem;
+}
+
+.adminHome aside {
+  height: 100vh;
+}
+
+.adminHome aside .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+.adminHome aside .logo {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.adminHome aside #close {
+  display: none;
+}
+
+.adminHome aside .sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 81vh;
+  position: relative;
+  top: 3rem;
+}
+
+.adminHome aside h3 {
+  font-weight: 500;
+}
+
+.adminHome aside>.sidebar>a {
+  display: flex;
+  color: var(--color-info-dark);
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  height: 3.7rem;
+  transition: all 300ms ease;
+}
+
+.adminHome aside .sidebar a svg {
+  font-size: 1.6rem;
+  transition: all 300ms ease;
+}
+
+.adminHome aside .sidebar a:last-child {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+
+.adminHome aside .sidebar a.active {
+  background: var(--color-light);
+  color: var(--color-primary);
+  margin-left: 0;
+}
+
+.adminHome aside .sidebar a.active::before {
+  content: '';
+  width: 6px;
+  height: 100%;
+  background: var(--color-primary);
+}
+
+.adminHome aside .sidebar a.active svg {
+  color: var(--color-primary);
+  margin-left: calc(1rem - 3px);
+}
+
+.adminHome aside .sidebar a:hover {
+  color: var(--color-primary);
+}
+
+.adminHome aside>.sidebar>a:hover>svg {
+  margin-left: 1rem;
+}
+
+/* .adminHome .main1 {
+  margin-top: 1.4rem;
+} */
+
+.adminHome .main1 .date {
+  display: inline-block;
+  background: var(--color-light);
+  border-radius: 0.4rem;
+  /* margin-top: 1rem; */
+  padding: 0.5rem 1.6rem;
+}
+
+.adminHome .main1 .date input[type='date'] {
+  background: transparent;
+  color: var(--color-dark);
+}
+
+.adminHome .main1 .insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.adminHome .main1 .insights>div {
+  background: var(--color-white);
+  padding: 1.8rem;
+  border-radius: 2rem;
+  /* margin-top: 1rem; */
+  box-shadow: 0 2rem 3rem var(--color-light);
+  transition: all 300ms ease;
+}
+
+.adminHome .main1 .insights>div:hover {
+  box-shadow: none;
+}
+
+.adminHome .main1 .insights>div .svg1 {
+  background: var(--color-success);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 2rem;
+}
+
+.adminHome .main1 .insights>div .svg2 {
+  background: var(--color-warning);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 2rem;
+}
+
+.adminHome .main1 .insights>div .svg3 {
+  background: var(--color-danger);
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: 2rem;
+}
+
+.adminHome .main1 .insights>div .middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adminHome .profile-theme {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.adminHome .theme-toggler {
+  background: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.6rem;
+  width: 4.2rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.adminHome .theme-toggler svg {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminHome .theme-toggler svg.active {
+  background: #7380ec;
+  color: white;
+  border-radius: 0.4rem;
+}
+
+.adminHome .main1 .insights h3 {
+  margin: 1rem 0 0.6rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.adminHome .main1 .insights .progres {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+
+.adminHome .main1 .insights .svg4 {
+  width: 7rem;
+  height: 7rem;
+}
+
+.adminHome .main1 .insights .svg4 circle {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 500;
+  stroke-dashoffset: 92;
+}
+
+.adminHome .main1 .insights .user-all .svg4 circle {
+  stroke-dashoffset: 92;
+  stroke-dasharray: 500;
+}
+
+.adminHome .main1 .insights .view-all .svg4 circle {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 80;
+}
+
+.adminHome .main1 .insights .blogpost-all .svg4 circle {
+  stroke-dashoffset: 35;
+  stroke-dasharray: 110;
+}
+
+.adminHome .main1 .left>h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.adminHome .main1 .insights .progres .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adminHome .main1>h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.adminHome .main1 .insights small {
+  margin-top: 1.3rem;
+  display: block;
+}
+
+.adminHome .main1 .recent-order {
+  margin-top: 2rem;
+}
+
+.adminHome .main1 .recent-order h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.adminHome .main1 .recent-order table {
+  background: var(--color-white);
+  width: 100%;
+  padding: 1.8rem;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.adminHome .main1 .recent-order table th {
+  padding-top: 1.8rem;
+}
+
+.adminHome .main1 .recent-order table:hover {
+  box-shadow: none;
+}
+
+.adminHome .main1 table tbody td {
+  height: 2.8rem;
+  border-bottom: 1px solid rgba(132, 139, 200, 0.18);
+  /* color: var(--color-dark-variant); */
+}
+
+.adminHome .main1 table tbody tr:last-child td {
+  border: none;
+}
+
+.adminHome .main1 .recent-order a {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.adminHome .main1>.add-q {
+  display: flex;
+  justify-content: end;
+  padding-right: 2rem;
+}
+
+.adminHome .main1>.add-q>div {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-dark);
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.6rem;
+  color: var(--color-white);
+  width: 100px;
+}
+
+.adminHome .main1>.add-badwords>div {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-dark);
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.6rem;
+  color: var(--color-white);
+  width: max-content;
+}
+
+.adminHome .main1>.add-q>div:hover {
+  background-color: #7d8da1;
+}
+
+.adminHome .main1>.add-q>div>a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.adminHome .right {
+  margin-top: 1.4rem;
+}
+
+.adminHome .right .top {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+
+.adminHome .right .top button {
+  display: none;
+}
+
+.adminHome .right .theme-toggler {
+  background: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.6rem;
+  width: 4.2rem;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.adminHome .right .theme-toggler svg {
+  font-size: 1.2rem;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminHome .right .theme-toggler svg.active {
+  background: #7380ec;
+  color: white;
+  border-radius: 0.4rem;
+}
+
+.adminHome .right .top .profile {
+  display: flex;
+  gap: 2rem;
+  text-align: right;
+}
+
+.adminHome .right .recent-update {
+  margin-top: 1rem;
+}
+
+.adminHome .right .recent-update h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.adminHome .right .recent-update .updates {
+  background-color: var(--color-white);
+  padding: 1.8rem;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.adminHome .right .recent-update .updates:hover {
+  box-shadow: none;
+}
+
+.adminHome .right .recent-update .updates .update {
+  display: grid;
+  grid-template-columns: 2.6rem auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.adminHome .right .activity-analytics {
+  margin-top: 2rem;
+}
+
+.adminHome .right .activity-analytics h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.adminHome .right .activity-analytics .item {
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+  padding: 1.3rem 1.7rem;
+  border-radius: 1.2rem;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+
+.adminHome .right .activity-analytics .item:hover {
+  box-shadow: none;
+}
+
+.adminHome .right .activity-analytics .item .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0;
+  width: 100%;
+}
+
+.adminHome .right .activity-analytics .item .icon {
+  padding: 0.6rem;
+  color: #fff;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+}
+
+.adminHome .right .activity-analytics .item.new-post .icon {
+  background: var(--color-danger);
+}
+
+.adminHome .right .activity-analytics .item.new-postwait .icon {
+  background: var(--color-success);
+}
+
+.adminHome .right .activity-analytics .add-product {
+  background-color: transparent;
+  border: 2px dashed var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminHome .right .activity-analytics .add-product:hover {
+  background: var(--color-primary);
+}
+
+.adminHome .right .activity-analytics .add-product div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.adminHome .right .activity-analytics .add-product div h3 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.adminHome .right .activity-analytics h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.adminHome .right .activity-analytics .right h5 {
+  font-size: 0.87rem;
+}
+
+.adminHome .bw-filter-buttons {
+  display: flex;
+  justify-content: right;
+  padding: 1rem 2rem;
+  gap: 0.2rem;
+}
+
+.adminHome .bw-filter-buttons button {
+  border: 1px solid #222;
+}
+
+#menu-btn {
+  display: none;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .adminHome .contain {
+    width: 94%;
+    grid-template-columns: 7rem auto;
+  }
+
+  .adminHome .main1 .chart-container {
+    transform: scale(1);
+    transform-origin: left top;
+  }
+
+  .adminHome {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .adminHome .content-container {
+    flex-grow: 1;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow: visible;
+  }
+
+  .adminHome .main1 .recent-order {
+    transform: scale(1);
+    transform-origin: left top;
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .adminHome aside .logo h2 {
+    display: none;
+  }
+  .adminHome .top>.logo>img {
+    display: block;
+    width: 100%;
+    margin-top: -20px; /* ปรับค่านี้ตามต้องการ */
+  }
+  .adminHome aside .sidebar h3 {
+    display: none;
+  }
+
+  .adminHome aside .sidebar a {
+    width: 5.6rem;
+  }
+
+  .adminHome aside .sidebar a:last-child {
+    position: relative;
+    margin-top: 1.8rem;
+  }
+
+  .adminHome .main1 .insights {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .adminHome .main1 .recent-order {
+    width: 94%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0 0 8.8rem;
+  }
+
+  .adminHome .main1 .recent-order table {
+    width: 83vw;
+  }
+
+  .adminHome .main1 table thead tr th:last-child,
+  .adminHome .main1 table thead tr th:first-child {
+    display: none;
+  }
+
+  .adminHome .main1 table tbody tr td:last-child,
+  .adminHome .main1 table tbody tr td:first-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .adminHome .contain {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .adminHome aside {
+    position: fixed;
+    left: -100%;
+    background: var(--color-white);
+    width: 18rem;
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem rgba(132, 139, 200, 0.18);
+    height: 100vh;
+    padding-right: 1.8rem;
+    display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+
+  .adminHome aside .logo {
+    margin-left: 1rem;
+  }
+  .adminHome .top>.logo>img {
+    display: block;
+    width: 100%;
+    margin-top: 0px; /* ปรับค่านี้ตามต้องการ */
+  }
+  .adminHome aside .logo h2 {
+    display: inline;
+  }
+
+  .adminHome aside .sidebar h3 {
+    display: inline;
+  }
+
+  .adminHome aside .sidebar a {
+    width: 100%;
+    height: 3.4rem;
+  }
+
+  .adminHome aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 5rem;
+  }
+
+  .adminHome aside #close {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .adminHome .main1 {
+    margin-top: 8rem;
+    padding: 0 1rem;
+  }
+
+  .adminHome .main1 .recent-order {
+    position: relative;
+    margin: 3rem 0 0 0;
+    width: 100%;
+  }
+
+  .adminHome .main1 .recent-order table {
+    width: 100%;
+    margin: 0;
+  }
+
+  .adminHome .header-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 0.8rem;
+    height: 4.6rem;
+    background: var(--color-background);
+    width: 100%;
+    margin: 2px 2px;
+    z-index: 2;
+    box-shadow: 0 1rem 1rem rgba(132, 139, 200, 0.18);
+  }
+  .adminHome .dark-theme-variables .header-content input {
+    color: var(--color-dark);
+  }
+
+  .adminHome .title-container {
+    margin-left: 3.5rem;
+  }
+
+  .adminHome .title-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .adminHome #menu-btn {
+    display: block;
+    position: absolute;
+    left: 1rem;
+    font-size: 2rem;
+  }
+
+  .adminHome .dark-theme-variables #menu-btn {
+    color: var(--color-dark);
+  }
+
+  .adminHome .theme-toggler {
+    width: 4.4rem;
+    position: absolute;
+    left: 66%;
+  }
+
+  .adminHome .profile .info {
+    display: none;
+  }
+
+  .adminHome .content-container {
+    margin-top:0.5rem;
+  }
+
+  .adminHome .right {
+    width: 94%;
+    margin: 0 auto 4rem;
+  }
+
+  .adminHome .right .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    padding: 0 0.8rem;
+    height: 4.6rem;
+    background: var(--color-background);
+    width: 100%;
+    margin: 0;
+    z-index: 2;
+    box-shadow: 0 1rem 1rem rgba(132, 139, 200, 0.18);
+  }
+
+  .adminHome .right .top .theme-toggler {
+    width: 4.4rem;
+    position: absolute;
+    left: 66%;
+  }
+
+  .adminHome .right .profile .info {
+    display: none;
+  }
+
+  .adminHome .right .top button {
+    display: inline-block;
+    background: transparent;
+    cursor: pointer;
+    color: #363949;
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+  }
+
+  .adminHome .right .top button svg {
+    font-size: 2rem;
+  }
+}

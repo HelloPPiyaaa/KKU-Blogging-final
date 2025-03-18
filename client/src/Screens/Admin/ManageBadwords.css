@@ -1,0 +1,74 @@
+.manageUser .main1 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bw-filter-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-bar-badwords {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  
+  .search-bar-badwords input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  .recent-order {
+    margin-top: 1.5rem;
+  }
+  
+  .activity-analytics {
+    margin-top: 0.5rem;
+  }
+  
+  .add-q.add-badwords {
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .add-q.add-badwords div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .item {
+    margin-bottom: 15px;
+  }
+  
+  .manage.d-flex {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit.warning {
+    cursor: pointer;
+    color: #ff9800;
+  }
+  
+  .delete.danger {
+    cursor: pointer;
+    color: #f44336;
+  }
+  
+  .manageUser .main1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

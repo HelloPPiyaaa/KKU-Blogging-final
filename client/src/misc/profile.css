@@ -1,0 +1,99 @@
+.follow-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.follow-icon > svg {
+  width: 25px;
+  height: 30px;
+  margin-right: 10px;
+  padding: 0;
+}
+.bar-icon {
+  border-left: 1px solid rgb(86, 86, 86);
+  margin: 0 10px 0 10px;
+}
+.follow-icon > h3 {
+  margin: 0;
+}
+.follow {
+  display: flex;
+  justify-content: center;
+}
+.nav-underline .nav-link {
+  display: flex;
+  justify-content: center;
+}
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2% 10%;
+}
+
+.nav-item > a > svg {
+  margin-right: 10px;
+}
+
+.nav-item > a > p {
+  margin: 0;
+}
+
+.nav-item > a {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item > a {
+  color: #000; /* สีของข้อความ */
+}
+
+.nav-underline .nav-link.active {
+  color: #cb6ce6 !important;
+}
+.nav-item > a:hover {
+  color: #555; /* สีของข้อความเมื่อ hover */
+}
+.profile_img {
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+}
+.profile_img > img {
+  width: 10rem;
+  height: 10rem;
+  background-color: #f0f0f0;
+}
+
+.chat {
+  margin-left: 10px;
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .profile_img {
+    align-items: center;
+  }
+  .max-md {
+    display: none;
+  }
+  .blogOfuser {
+    margin-top: 3rem; /* เท่ากับ mt-12 ใน Tailwind */
+  }
+}
+
+@media (min-width: 768px) {
+  .profile_img > img {
+    width: 6rem;
+    height: 6rem;
+  }
+  .profilepage {
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .profilepage {
+    gap: 3rem;
+  }
+}

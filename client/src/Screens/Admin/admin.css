@@ -1,0 +1,11 @@
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* ให้อยู่ด้านบนสุด */
+  background: white; /* พื้นหลังของโมดอล */
+  padding: 20px;
+  border-radius: 8px; /* เพิ่มมุมโค้งให้ดูสวยงาม */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}

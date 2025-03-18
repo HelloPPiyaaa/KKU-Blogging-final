@@ -1,0 +1,52 @@
+.inpage {
+  position: relative;
+  margin-bottom: 2rem;
+  background-color: white;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+.button-change {
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.p-4 {
+  text-transform: capitalize;
+}
+.text-black {
+  color: black;
+}
+.text-dark-grey {
+  color: rgb(101, 101, 101);
+}
+
+.underline-hr {
+  position: absolute;
+  bottom: 0;
+  transition-duration: 300ms;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+  .md\:hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}

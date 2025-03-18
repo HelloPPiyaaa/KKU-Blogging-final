@@ -1,0 +1,44 @@
+.h-cover {
+  min-height: calc(100vh - 80px);
+}
+.line-or {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  opacity: 0.5;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bold;
+}
+
+.custom-class {
+  margin-top: 1.5rem;
+  color: #000000;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.custom-link {
+  text-decoration: underline;
+  color: #000000;
+  font-size: 1.25rem;
+  margin-left: 0.25rem;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 400px;
+}

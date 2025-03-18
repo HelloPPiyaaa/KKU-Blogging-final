@@ -1,0 +1,329 @@
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* ตั้งค่า Flexbox ให้เนื้อหาจัดเรียงซ้าย-ขวา */
+/* ตั้งค่า Flexbox ให้เนื้อหาจัดเรียงซ้าย-ขวา */
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.logo {
+  height: 60px; /* ขนาดปกติของโลโก้ */
+  max-height: 100px; /* กำหนดขนาดสูงสุด */
+  width: auto;
+  object-fit: contain;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 50%;
+}
+
+/* รูปอยู่ขวา */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px; /* ปรับขนาดรูป */
+  height: auto;
+}
+
+nav a {
+  font-family: "Kanit", sans-serif; /* ใช้ฟอนต์ Kanit */
+  font-size: 16px; /* ปรับขนาดฟอนต์ตามต้องการ */
+  text-decoration: none; /* ทำให้ไม่มีขีดเส้นใต้ */
+  color: #333; /* ปรับสีของข้อความ */
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+/* ปรับการจัดตำแหน่งของ navbar */
+/* ปรับการจัดตำแหน่งของ navbar */
+
+.content {
+  flex: 1;
+  padding: 50px;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  width: 100%; /* ทำให้ข้อความมีความกว้าง 100% ของ container */
+  max-width: 800px; /* กำหนดความกว้างสูงสุดของข้อความ (ปรับตามความต้องการ) */
+  margin-right: auto; /* ไม่ให้ช่องว่างด้านขวา */
+  padding: 10px; /* เพิ่มช่องว่างรอบๆ ข้อความ */
+  line-height: 1.6; /* เพิ่มระยะห่างระหว่างบรรทัดเพื่อให้อ่านง่ายขึ้น */
+  word-wrap: break-word; /* คำจะถูกตัดและย่อไปที่บรรทัดถัดไปเมื่อเกินขอบเขต */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  font-family: "Kanit", sans-serif; /* ใช้ฟอนต์ Kanit */
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-primary a {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Kanit", sans-serif; /* ใช้ฟอนต์ Kanit */
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Kanit", sans-serif; /* ใช้ฟอนต์ Kanit */
+}
+
+.trusted {
+  color: #888;
+  margin-top: 30px;
+}
+
+/* 📌 จัดเนื้อหาให้อยู่ซ้าย-ขวา */
+.main-content {
+  display: flex;
+  align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  justify-content: space-between; /* ทำให้ข้อความอยู่ซ้าย - รูปอยู่ขวา */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem; /* เพิ่มช่องว่างระหว่างข้อความกับรูป */
+}
+
+/* 📌 ข้อความอยู่ฝั่งซ้าย */
+.text-container {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
+
+/* 📌 รูปอยู่ฝั่งขวา */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* ชิดขวา */
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px; /* กำหนดขนาดสูงสุดของรูป */
+  height: auto;
+}
+
+.footer {
+  padding: 15px 50px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 0.9rem;
+  padding: 10px 0;
+}
+
+.footer-menu a {
+  color: #555;
+  text-decoration: none;
+}
+
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+
+/* firstpage.css */
+
+/* เริ่มต้นที่การซ่อนตัวอักษร */
+.split-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px); /* เริ่มต้นให้ตัวอักษรอยู่ด้านล่าง */
+  animation: splitTextAnimation 1s ease forwards;
+}
+
+@keyframes splitTextAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* สำหรับให้ตัวอักษรแต่ละตัวเริ่มต้นด้วยเวลา delay ที่ต่างกัน */
+.split-char:nth-child(1) {
+  animation-delay: 0s;
+}
+.split-char:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.split-char:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.split-char:nth-child(4) {
+  animation-delay: 0.3s;
+}
+/* และเพิ่ม `nth-child` ตามจำนวนตัวอักษรทั้งหมดในข้อความ */
+
+.show .split-char {
+  animation: splitTextAnimation 1s ease forwards;
+}
+
+/* เพิ่มระยะห่างระหว่างตัวอักษรในข้อความ */
+.main-title .split-char {
+  letter-spacing: 0em; /* ปรับระยะห่างตามที่ต้องการ */
+}
+
+/* เพิ่มระยะห่างระหว่างคำ */
+.main-title {
+  word-spacing: 0.2em; /* ปรับระยะห่างระหว่างคำ */
+  font-size: 50px;
+}
+
+/* @media สำหรับหน้าจอโทรศัพท์ */
+@media (max-width: 768px) {
+  .logo {
+    height: 40px; /* ขนาดปกติของโลโก้ */
+    max-height: 100px; /* กำหนดขนาดสูงสุด */
+    width: auto;
+    object-fit: contain;
+  }
+  nav a {
+    font-size: 12px; /* ปรับขนาดฟอนต์ตามต้องการ */
+    margin-right: 20px;
+  }
+  .navbar h2 {
+    font-size: 10px;
+  }
+  .main-content p {
+    font-size: 12px;
+  }
+  .main-title {
+    word-spacing: 0.5em; /* ปรับระยะห่างระหว่างคำ */
+    font-size: 15px;
+    margin-bottom: -10px;
+  }
+  /* ปรับขนาดตัวอักษร */
+  .title {
+    font-size: 1rem; /* ลดขนาดตัวอักษร */
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1rem; /* ลดขนาดตัวอักษร */
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-size: 10px; /* ลดขนาดตัวอักษร */
+    padding: 20px; /* ลดช่องว่างรอบๆ ข้อความ */
+    margin-right: 10px; /* เพิ่ม margin ขวา */
+  }
+
+  /* เพิ่ม margin ให้กับเนื้อหาภายใน */
+  .content {
+    padding: 70px; /* ลด padding */
+    margin: 10px; /* เพิ่ม margin */
+  }
+
+  /* ปรับการจัดวางปุ่ม */
+  .buttons {
+    display: flex;
+    flex-direction: column; /* ให้ปุ่มเรียงแนวตั้ง */
+    gap: 10px;
+    margin-top: -50px;
+    margin-bottom: 0px;
+    justify-content: center; /* จัดปุ่มให้อยู่กลางแนวนอน */
+    align-items: center; /* จัดปุ่มให้อยู่กลางแนวตั้ง */
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 10px;
+    width: 100%; /* กำหนดความกว้างของปุ่ม */
+    padding: 7px 10px; /* ปรับขนาดปุ่ม */
+  }
+
+  .main-content {
+    flex-direction: column; /* เปลี่ยนเป็นแนวตั้ง */
+    text-align: center;
+  }
+
+  .text-container {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .image-container {
+    justify-content: center; /* จัดให้รูปอยู่กลาง */
+    order: 2; /* ให้รูปอยู่ล่าง */
+    margin-top: 1rem;
+  }
+
+  .hero-image {
+    width: 80%;
+  }
+  .footer-menu {
+    font-size: 0.8rem;
+    gap: 10px;
+  }
+  .content-container {
+    flex-direction: column; /* เรียงจากบนลงล่าง */
+    text-align: center;
+  }
+
+  .text-content {
+    max-width: 100%;
+  }
+  .hero-image {
+    width: 50%;
+  }
+  .image-container {
+    order: 2; /* ให้รูปอยู่ล่าง */
+    margin-top: 1rem;
+  }
+}

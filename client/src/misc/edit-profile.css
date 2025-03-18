@@ -1,0 +1,142 @@
+/* .coverpic > img {
+  height: 60vh;
+  object-fit: cover;
+  overflow: hidden;
+}
+.input-group-append {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.input-group-append1 {
+  display: flex;
+  justify-content: end;
+}
+.input-group-text1 {
+  position: absolute;
+  display: flex;
+  top: 55%;
+  background: white;
+  padding: 0.3rem;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+.input-group-text2 {
+  position: absolute;
+  display: flex;
+  top: 58%;
+  background: white;
+  padding: 0.3rem;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 300px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+  color: black;
+}
+.ex-Pro1 {
+  display: flex;
+  justify-content: center;
+  width: -webkit-fill-available;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.profilepic {
+  position: absolute;
+  transform: translate(8%, -50%);
+} */
+/* .hover\:text-black:hover {
+  color: black; /* เปลี่ยนสีเป็นสีดำเมื่อ hover */
+/* }  */
+
+/* .icon-social-link > * {
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+} */
+
+.imgDiv {
+  color: white;
+  background: rgba(0, 0, 0, 0.442);
+  opacity: 0;
+  cursor: pointer;
+}
+.imgDiv:hover {
+  opacity: 1;
+}
+.divinput {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem; /* 10 * 0.25rem */
+  padding-bottom: 2.5rem;
+  gap: 2rem;
+}
+.Inputbox-edit {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.textarea-editprofile {
+  height: 16rem;
+  margin-top: 1.25rem;
+  padding-left: 1.25rem;
+  line-height: 1.75;
+  resize: none;
+}
+
+@media (min-width: 1024px) {
+  .divinput {
+    flex-direction: row;
+    gap: 2.5rem; /* 10 * 0.25rem */
+  }
+  .btn-upload {
+    width: 100%;
+  }
+  .textarea-editprofile {
+    height: 10rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .divlabel {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  /* .about-user {
+    width: 90%;
+    margin-top: 1.5rem;
+  } */
+
+  .Inputbox-edit {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .object-social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .topic-editProfile {
+    display: none;
+  }
+}
